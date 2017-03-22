@@ -4,7 +4,7 @@ In order to use SEAT you need to follow 5 simple steps:
 
 1. Install [Stack](https://docs.haskellstack.org/en/stable/README/), a Haskell package manager which includes `GHC`. Make sure to run `stack setup` once it is installed. 
 
-2. [*Download VS Code*](https://code.visualstudio.com)
+2. [Download VS Code](https://code.visualstudio.com)
 
 3. [Download SEAT extension](https://marketplace.visualstudio.com/items?itemName=UCL.labassignments). You can also run this command `ext install labassignments` in VS Code Quick Open.
 
