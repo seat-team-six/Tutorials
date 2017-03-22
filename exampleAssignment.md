@@ -83,4 +83,26 @@ merge xs ys | head xs < head ys = (head xs) : merge (tail xs) ys
             | otherwise         = (head ys) : merge xs (tail ys)   
 ```
 
+# 3 Other functions
+
+## 3.1 bmiTell
+Write the function `bmiTell`:
+Your BMI equals your weight divided by your height squared. If your BMI is less than 18.5, you're considered underweight and the function should print "You're underweight, you emo, you!". If it's anywhere from 18.5 to 25 then you're considered normal, and it should print "You're supposedly normal. Pffft, I bet you're ugly!". 25 to 30 is overweight (print "You're fat! Lose some weight, fatty!") and more than 30 is obese (print  "You're a whale, congratulations!"). Call the function bmiTell which takes an a which is a instance of RealFloat: 
+hint : bmiTell :: (RealFloat a) => a -> String  
+```
+bmiTell :: (RealFloat a) => a -> String  
+bmiTell bmi  
+        | bmi <= 18.5 = "You're underweight, you emo, you!"  
+        | bmi <= 25.0 = "You're supposedly normal. Pffft, I bet you're ugly!"  
+        | bmi <= 30.0 = "You're fat! Lose some weight, fatty!"  
+        | otherwise   = "You're a whale, congratulations!"  
+```
+
+## 3.2 bmiTell'
+create a function `bmiTell'` function, so it takes your weight and hight as arguments (in this order). Both arguments should be instances of `RealFloat`
+```
+bmiTell' :: (RealFloat a) => a -> a -> String
+bmiTell' weight height = bmiTell (weight / height ^ 2)
+```
+
 
