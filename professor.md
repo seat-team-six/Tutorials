@@ -1,6 +1,5 @@
 # SEAT for professors
 
-
 In order to create an assignment in SEAT three easy steps need to be followed:
 
 ### Set up a classroom
