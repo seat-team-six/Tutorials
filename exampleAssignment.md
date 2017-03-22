@@ -1,6 +1,6 @@
 ```
 {-# LANGUAGE ParallelListComp #-}
-import Prelude hiding (zip, map, foldr, foldl, length, foldr1, reverse, repeat, cycle, take, drop, splitAt, takeWhile, dropWhile)
+import Prelude hiding (zip, map, foldr, foldl, length, foldr1, reverse, repeat, cycle, take, drop, splitAt, takeWhile, dropWhile, span)
 import qualified Prelude as P
 ```
 
@@ -13,7 +13,7 @@ Work this list top to button, as you might need some of the functions for later 
 Implement the map function using list comprehension
 ```
 map :: (a -> b) -> [a] -> [b]
-map f xs = [f x | x <- xs]
+map = P.map
 ```
 
 ## length
@@ -21,58 +21,58 @@ Implement the `length` function, which returns the length
 using list comprehension and the `sum` function
 ```
 length :: [a] -> Int
-length xs = sum [1 | _ <- xs]
+length xs =P.length
 ```
 
 ## zip
 Implement the zip function using list comprehension
 ```
 zip :: [a] -> [b] -> [(a, b)]
-zip xs ys = [(x, y) | x <- xs, y <- ys]
+zip = P.zip
 ```
 ## foldr
-Implement the `foldr` function which takes a function, a starting value and a list 
+Implement the `foldr f x xs` function which takes a function f, a starting value x  and a list xs
 ```
 foldr :: (a -> b -> b) -> b -> [a] -> b
 foldr = P.foldr
 ```
 
 ## foldl
-Implement the `foldl` function taking a function, a starting vlaue and a list
+Implement the `foldl f x xs` function taking a function, a starting value and a list
 ```
 foldl :: (b -> a -> b) -> b -> [a] -> b 
 foldl = P.foldl
 ```
 
 ## foldr1
-A variant of foldr that has no base case, and thus may only be applied to non-empty lists.
+A variant of `foldr` that has no base case, and thus may only be applied to non-empty lists.
 ```
 foldr1 :: (a -> a -> a) -> [a] -> a 
 foldr1 = P.foldr1
 ```
 ## reverse
-reverse xs returns the elements of xs in reverse order. xs must be finite.
+`reverse xs` returns the elements of xs in reverse order. xs must be finite.
 ```
 reverse :: [a] -> [a] 
 reverse = P.reverse
 ```
 
 ## repeat
-repeat x is an infinite list, with x the value of every element.
+`repeat x` is an infinite list, with x the value of every element.
 ```
 repeat :: a -> [a]
 repeat = P.repeat
 ```
 
 ## cycle
-cycle ties a finite list into a circular one, or equivalently, the infinite repetition of the original list. It is the identity on infinite lists.
+`cycle xs` ties a finite list into a circular one, or equivalently, the infinite repetition of the original list. It is the identity on infinite lists.
 ```
 cycle :: [a] -> [a] 
 cycle = P.cycle
 ```
 
 ## take
-take n, applied to a list xs, returns the prefix of xs of length n, or xs itself if n > length xs.
+`take n xs`, applied to a list xs, returns the prefix of xs of `length` n, or xs itself if n > `length` xs.
 n should be of type `Int`
 ```
 take :: Int -> [a] -> [a] 
@@ -80,7 +80,7 @@ take = P.take
 ```
 
 ## drop 
-drop n xs returns the suffix of xs after the first n elements, or [] if n > length xs.
+`drop n xs` returns the suffix of xs after the first n elements, or [] if n > length xs.
 n should be of type `Int`
 ```
 drop :: Int -> [a] -> [a]
@@ -88,7 +88,7 @@ drop = P.drop
 ```
 
 ## splitAt
-splitAt n xs returns a tuple where first element is xs prefix of length n and second element is the remainder of the list.
+`splitAt n xs` returns a tuple where first element is xs prefix of length n and second element is the remainder of the list.
 n should be of type `Int`
 ```
 splitAt :: Int -> [a] -> ([a], [a]) 
@@ -96,18 +96,28 @@ splitAt = P.splitAt
 ```
 
 ## takeWhile
-takeWhile, applied to a predicate p and a list xs, returns the longest prefix (possibly empty) of xs of elements that satisfy p
+`takeWhile p xs`, applied to a predicate p and a list xs, returns the longest prefix (possibly empty) of xs of elements that satisfy p
 ```
 takeWhile :: (a -> Bool) -> [a] -> [a]
 takeWhile = P.takeWhile
 ```
 
 ## dropWhile
-dropWhile p xs returns the suffix remaining after takeWhile p xs
+`dropWhile p xs` returns the suffix remaining after takeWhile p xs
+`dropWhile :: (a -> Bool) -> [a] -> [a] `
 ```
 dropWhile :: (a -> Bool) -> [a] -> [a] 
 dropWhile = P.dropWhile
 ```
+
+## span
+`span p xs` applied to a predicate p and a list xs, returns a tuple where first element is longest prefix (possibly empty) of xs of elements that satisfy p and second element is the remainder of the list.
+`span :: (a -> Bool) -> [a] -> ([a], [a])` 
+```
+span :: (a -> Bool) -> [a] -> ([a], [a])
+span = P.span
+```
+
 
 
 # Sorting Algorithms
