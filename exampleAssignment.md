@@ -4,7 +4,7 @@ import Prelude hiding (zip, map, foldr, foldl, length, foldr1)
 import qualified Prelude as P
 ```
 
-# 1 Standard functions
+# 1 Standard Library functions
 In this exercise you should implement all functions
 using list comprehension
 
@@ -83,12 +83,4 @@ merge xs ys | head xs < head ys = (head xs) : merge (tail xs) ys
             | otherwise         = (head ys) : merge xs (tail ys)   
 ```
 
-# 3 Higher order functions
-In this exercise we want to implement some higher order functions
 
-## 3.1 map 
-Implement the map fuction by using list comprehension
-```
-map :: (a -> b) -> [a] -> [b]
-map f xs = [f x | x <- xs]
-```
