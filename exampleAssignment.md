@@ -39,7 +39,7 @@ foldr = P.foldr
 ## 1.5 foldl
 Implement the `foldl` function taking a function, a starting vlaue and a list
 ```
-foldl :: (b -> a -> b) -> b -> t a -> b 
+foldl :: (b -> a -> b) -> b -> [a] -> b 
 foldl = P.foldl
 ```
 
