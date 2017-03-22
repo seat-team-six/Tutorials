@@ -1,6 +1,7 @@
 ```
 {-# LANGUAGE ParallelListComp #-}
-import Prelude hiding (zip, map, length)
+import Prelude hiding (zip, map, foldr, foldl, length, foldr1)
+import qualified Prelude as P
 ```
 
 # 1 Standard functions
@@ -26,6 +27,27 @@ length xs = sum [1 | _ <- xs]
 Implement the zip function using list comprehension
 zip :: [a] -> [b] -> [(a, b)]
 zip xs ys = [(x, y) | x <- xs, y <- ys]
+
+## 1.4 foldr
+Implement the `foldr` function which takes a function, a starting value and a list 
+```
+foldr :: (a -> b -> b) -> b -> [a] -> b
+foldr = P.foldr
+```
+
+## 1.5 foldl
+Implement the `foldl` function taking a function, a starting vlaue and a list
+```
+foldl :: (b -> a -> b) -> b -> t a -> b 
+foldl = P.foldl
+```
+
+## 1.6 foldr1
+A variant of foldr that has no base case, and thus may only be applied to non-empty lists.
+```
+foldr1 :: (a -> a -> a) -> [a] -> a 
+foldr1 = P.foldr1
+```
 
 # 2 Sorting Algorithms
 In this Exercise we want to implement some simple sorting 
