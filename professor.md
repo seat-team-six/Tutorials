@@ -22,8 +22,8 @@ language and therefore no special software is required. The structure of the fil
 # Exercise 2 explanation
 ## Question 2.1 explanation
 
-```Haskell code that answers question 1.1``
-````
+```Haskell code that answers question 1.1```
+```
 
 There's no limit in the amount of exercises or questions. The code provided for
 every question can be of any length. If the code for a specific questions contains more that one 
