@@ -2,6 +2,7 @@
 {-# LANGUAGE ParallelListComp #-}
 import Prelude hiding (zip, map, foldr, foldl, length, foldr1, reverse, repeat, cycle, take, drop, splitAt, takeWhile, dropWhile, span)
 import qualified Prelude as P
+import qualified Data.List as DL (sort)
 ```
 
 # Standard Library functions
@@ -123,35 +124,32 @@ span = P.span
 # Sorting Algorithms
 In this Exercise we want to implement some simple sorting 
 Algorithms
+
 # insertion sort
 Define a function `isort` which inserts a value at the right place 
 and returns the list using list comprehension. The function should expect values which are an `instance` 
 of `Ord`.
 ``` 
 isort :: Ord a => [a] -> [a]
-isort [] = []
-isort (y:xs) = 
-  [x | x <- (isort xs), x <= y] ++ [y] ++ [x | x <- (isort xs), x > y]
+isort = DL.sort
 ```
 
 # merge sort
-Write a function `msort` taking a list of values 
+Write a function `msort xs` taking a list xs of values 
 returning the sorted list. Write it in a recursive way!
 
 ```
 msort :: Ord a => [a] -> [a]
-msort [] = []
-msort [a]= [a]
-msort xs =  merge
-                (msort(take (length xs `div` 2) xs))
-                (msort(drop (length xs `div` 2) xs))
-
-merge :: Ord a => [a] -> [a] -> [a]
-merge a [] = a
-merge [] a = a
-merge xs ys | head xs < head ys = (head xs) : merge (tail xs) ys
-            | otherwise         = (head ys) : merge xs (tail ys)   
+msort = DL.sort
 ```
+
+## quicksort
+By now, you should now what to do!
+```
+quicksort :: (Ord a) => [a] -> [a]  
+quicksort = DL.sort
+``` 
+
 
 # Other functions
 
