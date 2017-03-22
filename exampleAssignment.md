@@ -25,9 +25,10 @@ length xs = sum [1 | _ <- xs]
 
 ## 1.3 zip
 Implement the zip function using list comprehension
+```
 zip :: [a] -> [b] -> [(a, b)]
 zip xs ys = [(x, y) | x <- xs, y <- ys]
-
+```
 ## 1.4 foldr
 Implement the `foldr` function which takes a function, a starting value and a list 
 ```
