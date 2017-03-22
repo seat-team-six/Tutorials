@@ -1,12 +1,13 @@
 ```
 {-# LANGUAGE ParallelListComp #-}
-import Prelude hiding (zip, map, foldr, foldl, length, foldr1)
+import Prelude hiding (zip, map, foldr, foldl, length, foldr1, reverse, repeat, cycle, take, drop, splitAt, takeWhile, dropWhile)
 import qualified Prelude as P
 ```
 
 # Standard Library functions
 In this exercise you should implement all functions
-using list comprehension
+using list comprehension. 
+Work this list top to button, as you might need some of the functions for later questions.
 
 ## map
 Implement the map function using list comprehension
@@ -49,6 +50,65 @@ A variant of foldr that has no base case, and thus may only be applied to non-em
 foldr1 :: (a -> a -> a) -> [a] -> a 
 foldr1 = P.foldr1
 ```
+## reverse
+reverse xs returns the elements of xs in reverse order. xs must be finite.
+```
+reverse :: [a] -> [a] 
+reverse = P.reverse
+```
+
+## repeat
+repeat x is an infinite list, with x the value of every element.
+```
+repeat :: a -> [a]
+repeat = P.repeat
+```
+
+## cycle
+cycle ties a finite list into a circular one, or equivalently, the infinite repetition of the original list. It is the identity on infinite lists.
+```
+cycle :: [a] -> [a] 
+cycle = P.cycle
+```
+
+## take
+take n, applied to a list xs, returns the prefix of xs of length n, or xs itself if n > length xs.
+n should be of type `Int`
+```
+take :: Int -> [a] -> [a] 
+take = P.take
+```
+
+## drop 
+drop n xs returns the suffix of xs after the first n elements, or [] if n > length xs.
+n should be of type `Int`
+```
+drop :: Int -> [a] -> [a]
+drop = P.drop
+```
+
+## splitAt
+splitAt n xs returns a tuple where first element is xs prefix of length n and second element is the remainder of the list.
+n should be of type `Int`
+```
+splitAt :: Int -> [a] -> ([a], [a]) 
+splitAt = P.splitAt
+```
+
+## takeWhile
+takeWhile, applied to a predicate p and a list xs, returns the longest prefix (possibly empty) of xs of elements that satisfy p
+```
+takeWhile :: (a -> Bool) -> [a] -> [a]
+takeWhile = P.takeWhile
+```
+
+## dropWhile
+dropWhile p xs returns the suffix remaining after takeWhile p xs
+```
+dropWhile :: (a -> Bool) -> [a] -> [a] 
+dropWhile = P.dropWhile
+```
+
 
 # Sorting Algorithms
 In this Exercise we want to implement some simple sorting 
@@ -94,7 +154,7 @@ bmiTell :: (RealFloat a) => a -> String
 bmiTell bmi  
         | bmi <= 18.5 = "You're underweight, you emo, you!"  
         | bmi <= 25.0 = "You're supposedly normal. Pffft, I bet you're ugly!"  
-        | bmi <= 30.0 = "You're fat! Lose some weight, fatty!"  
+        | bmi <= 30.0 = "pi :: a You're fat! Lose some weight, fatty!"  
         | otherwise   = "You're a whale, congratulations!"  
 ```
 
@@ -106,7 +166,7 @@ bmiTell' weight height = bmiTell (weight / height ^ 2)
 ```
 
 ## cyclinder
-Write a function `cylinder` which calcs cylinder's surface area based on its height and radius (both height and radius should be instances of `RealFloat`)
+Write a function `cylinder` which calcs cylinder's surface area based on its height and radius (both height and radius should be instances of `RealFloat`). Use the standard function `pi :: a` in order to get a preceise number of pi 
 ```
 cylinder :: (RealFloat a) => a -> a -> a  
 cylinder r h = 
