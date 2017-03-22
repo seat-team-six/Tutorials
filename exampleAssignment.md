@@ -105,4 +105,12 @@ bmiTell' :: (RealFloat a) => a -> a -> String
 bmiTell' weight height = bmiTell (weight / height ^ 2)
 ```
 
-
+## cyclinder
+Write a function `cylinder` which calcs cylinder's surface area based on its height and radius (both height and radius should be instances of `RealFloat`)
+```
+cylinder :: (RealFloat a) => a -> a -> a  
+cylinder r h = 
+    let sideArea = 2 * pi * r * h  
+        topArea = pi * r ^2  
+     in sideArea + 2 * topArea  
+```
