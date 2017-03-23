@@ -1,16 +1,14 @@
 ```
-{-# LANGUAGE ParallelListComp #-}
 import Prelude hiding (zip, map, foldr, foldl, length, foldr1, reverse, repeat, cycle, take, drop, splitAt, takeWhile, dropWhile, span)
 import qualified Prelude as P
 import qualified Data.List as DL (sort)
 ```
 
 # Standard Library functions
-In this exercise you should implement all functions using list comprehension. 
-Work this list top to button, as you might need some of the functions for later questions.
+In this exercise you should implement all functions using list comprehension or recursive style without using any standard library function. Work this list top to button, as you might need some of the functions for later questions.
 
 ## map
-Implement the map function using list comprehension
+Implement the map function
 ```
 map :: (a -> b) -> [a] -> [b]
 map = P.map
@@ -25,7 +23,7 @@ length = P.length
 ```
 
 ## zip
-Implement the zip function using list comprehension
+Implement the zip function
 ```
 zip :: [a] -> [b] -> [(a, b)]
 zip = P.zip
