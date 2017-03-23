@@ -12,97 +12,89 @@ Work this list top to button, as you might need some of the functions for later 
 ## map
 Implement the map function using list comprehension
 ```
-map :: (a -> b) -> [a] -> [b]
-map = P.map
+ma' :: (a -> b) -> [a] -> [b]
+map' = P.map
 ```
 
 ## length
 Implement the `length` function, which returns the length
 using list comprehension and the `sum` function
 ```
-length :: [a] -> Int
-length = P.length 
+length' :: [a] -> Int
+length' = P.length 
 ```
 
 ## zip
 Implement the zip function using list comprehension
 ```
-zip :: [a] -> [b] -> [(a, b)]
-zip = P.zip
+zip' :: [a] -> [b] -> [(a, b)]
+zip' = P.zip
 ```
 ## foldr
 Implement the `foldr f x xs` function which takes a function f, a starting value x  and a list xs
 ```
-foldr :: (a -> b -> b) -> b -> [a] -> b
-foldr = P.foldr
+foldr' :: (a -> b -> b) -> b -> [a] -> b
+foldr' = P.foldr
 ```
 
 ## foldl
 Implement the `foldl f x xs` function taking a function, a starting value and a list
 ```
-foldl :: (b -> a -> b) -> b -> [a] -> b 
-foldl = P.foldl
+foldl' :: (b -> a -> b) -> b -> [a] -> b 
+foldl' = P.foldl
 ```
 
-## foldr1
-A variant of `foldr` that has no base case, and thus may only be applied to non-empty lists.
-```
-foldr1 :: (a -> a -> a) -> [a] -> a 
-foldr1 = P.foldr1
-```
 ## reverse
 `reverse xs` returns the elements of xs in reverse order. xs must be finite.
 ```
-reverse :: [a] -> [a] 
-reverse = P.reverse
+reverse' :: [a] -> [a] 
+reverse' = P.reverse
 ```
 
 ## take
 `take n xs`, applied to a list xs, returns the prefix of xs of `length` n, or xs itself if n > `length` xs.
 n should be of type `Int`
 ```
-take :: Int -> [a] -> [a] 
-take = P.take
+take' :: Int -> [a] -> [a] 
+take' = P.take
 ```
 
 ## drop 
 `drop n xs` returns the suffix of xs after the first n elements, or [] if n > length xs. n should be of type `Int`
 ```
-drop :: Int -> [a] -> [a]
-drop = P.drop
+drop' :: Int -> [a] -> [a]
+drop' = P.drop
 ```
 
 ## splitAt
 `splitAt n xs` returns a tuple where first element is xs prefix of length n and second element is the remainder of the list. n should be of type `Int`
 ```
-splitAt :: Int -> [a] -> ([a], [a]) 
-splitAt = P.splitAt
+splitAt' :: Int -> [a] -> ([a], [a]) 
+splitAt' = P.splitAt
 ```
 
 ## takeWhile
 `takeWhile p xs`, applied to a predicate p and a list xs, returns the longest prefix (possibly empty) of xs of elements that satisfy p
 ```
-takeWhile :: (a -> Bool) -> [a] -> [a]
-takeWhile = P.takeWhile
+takeWhile' :: (a -> Bool) -> [a] -> [a]
+takeWhile' = P.takeWhile
 ```
 
 ## dropWhile
-`dropWhile p xs` returns the suffix remaining after takeWhile p xs
-`dropWhile :: (a -> Bool) -> [a] -> [a] `
+`dropWhile' p xs` returns the suffix remaining after takeWhile p xs
+`dropWhile' :: (a -> Bool) -> [a] -> [a] `
 ```
-dropWhile :: (a -> Bool) -> [a] -> [a] 
-dropWhile = P.dropWhile
+dropWhile' :: (a -> Bool) -> [a] -> [a] 
+dropWhile' = P.dropWhile
 ```
 
 ## span
-`span p xs` applied to a predicate p and a list xs, returns a tuple where first element is longest prefix (possibly empty) of xs of elements that satisfy p and second element is the remainder of the list.
-`span :: (a -> Bool) -> [a] -> ([a], [a])` 
+`span' p xs` applied to a predicate p and a list xs, returns a tuple where first element is longest prefix (possibly empty) of xs of elements that satisfy p and second element is the remainder of the list.
+`span' :: (a -> Bool) -> [a] -> ([a], [a])` 
 ```
-span :: (a -> Bool) -> [a] -> ([a], [a])
-span = P.span
+span' :: (a -> Bool) -> [a] -> ([a], [a])
+span' = P.span
 ```
-
-
 
 # Sorting Algorithms
 In this Exercise we want to implement some simple sorting 
