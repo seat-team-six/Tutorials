@@ -6,8 +6,7 @@ import qualified Data.List as DL (sort)
 ```
 
 # Standard Library functions
-In this exercise you should implement all functions
-using list comprehension. 
+In this exercise you should implement all functions using list comprehension. 
 Work this list top to button, as you might need some of the functions for later questions.
 
 ## map
@@ -22,7 +21,7 @@ Implement the `length` function, which returns the length
 using list comprehension and the `sum` function
 ```
 length :: [a] -> Int
-length xs =P.length
+length = P.length 
 ```
 
 ## zip
