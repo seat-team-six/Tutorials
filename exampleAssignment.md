@@ -1,7 +1,5 @@
 ```
 import Prelude hiding (zip, map, foldr, foldl, length, foldr1, reverse, repeat, cycle, take, drop, splitAt, takeWhile, dropWhile, span)
-import qualified Prelude as P
-import qualified Data.List as DL (sort)
 ```
 
 # Standard Library functions
