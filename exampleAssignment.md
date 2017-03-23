@@ -12,7 +12,7 @@ Work this list top to button, as you might need some of the functions for later 
 ## map
 Implement the map function using list comprehension
 ```
-ma' :: (a -> b) -> [a] -> [b]
+map' :: (a -> b) -> [a] -> [b]
 map' = P.map
 ```
 
