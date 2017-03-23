@@ -80,16 +80,14 @@ take = P.take
 ```
 
 ## drop 
-`drop n xs` returns the suffix of xs after the first n elements, or [] if n > length xs.
-n should be of type `Int`
+`drop n xs` returns the suffix of xs after the first n elements, or [] if n > length xs. n should be of type `Int`
 ```
 drop :: Int -> [a] -> [a]
 drop = P.drop
 ```
 
 ## splitAt
-`splitAt n xs` returns a tuple where first element is xs prefix of length n and second element is the remainder of the list.
-n should be of type `Int`
+`splitAt n xs` returns a tuple where first element is xs prefix of length n and second element is the remainder of the list. n should be of type `Int`
 ```
 splitAt :: Int -> [a] -> ([a], [a]) 
 splitAt = P.splitAt
@@ -125,17 +123,14 @@ In this Exercise we want to implement some simple sorting
 Algorithms
 
 ## insertion sort
-Define a function `isort` which inserts a value at the right place 
-and returns the list using list comprehension. The function should expect values which are an `instance` 
-of `Ord`.
+Define a function `isort` which inserts a value at the right place and returns the list using list comprehension. The function should expect values which are an `instance` of `Ord`.
 ``` 
 isort :: Ord a => [a] -> [a]
 isort = DL.sort
 ```
 
 ## merge sort
-Write a function `msort xs` taking a list xs of values 
-returning the sorted list. Write it in a recursive way!
+Write a function `msort xs` taking a list xs of values returning the sorted list. Write it in a recursive way!
 
 ```
 msort :: Ord a => [a] -> [a]
