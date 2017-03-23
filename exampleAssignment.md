@@ -57,20 +57,6 @@ reverse :: [a] -> [a]
 reverse = P.reverse
 ```
 
-## repeat
-`repeat x` is an infinite list, with x the value of every element.
-```
-repeat :: a -> [a]
-repeat = P.repeat
-```
-
-## cycle
-`cycle xs` ties a finite list into a circular one, or equivalently, the infinite repetition of the original list. It is the identity on infinite lists.
-```
-cycle :: [a] -> [a] 
-cycle = P.cycle
-```
-
 ## take
 `take n xs`, applied to a list xs, returns the prefix of xs of `length` n, or xs itself if n > `length` xs.
 n should be of type `Int`
