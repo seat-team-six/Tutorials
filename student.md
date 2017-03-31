@@ -8,7 +8,7 @@ In order to use SEAT as a student you need to follow 5 simple steps:
 
 3. [Download SEAT extension](https://marketplace.visualstudio.com/items?itemName=UCL.labassignments). You can also run this command `ext install labassignments` in VS Code Quick Open.
 
-4. Open any `.pla` file ([here](https://raw.githubusercontent.com/seat-team-six/Tutorials/blob/master/HaskellBasics.pla) you have one covering Haskell basics). SEAT will automatically generate a `.hs` where you can start coding your solutions. You'll need to open the `.pla` file first everytime you want to use SEAT.
+4. Open any `.pla` file ([here](https://drive.google.com/open?id=0B-bbBbmOr9FZMlJUQXYyQ05DSGs) you have one covering Haskell basics). SEAT will automatically generate a `.hs` where you can start coding your solutions. You'll need to open the `.pla` file first everytime you want to use SEAT.
 
 5. Whenever you want to check if your code is correct, click the button: `Check answers`. SEAT will assess your solutions and provide feedback. If the code doesn't compile, SEAT will show the compiling errors through GHCi.
 
