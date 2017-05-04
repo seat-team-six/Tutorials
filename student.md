@@ -12,7 +12,7 @@ In order to use SEAT as a student you need to follow 5 simple steps:
 
 5. Whenever you want to check if your code is correct, click the button: `Check answers`. SEAT will assess your solutions and provide feedback. If the code doesn't compile, SEAT will show the compiling errors through GHCi.
 
-Note: In order for SEAT to work correctly with Stack, two configurations must be changed: 
+Note: In order for SEAT to work correctly with Stack, two configurations must be changed (open the config file through Code > Preferences > Settings): 
   - `"seat.haskell.runHaskell"` -> `"stack runhaskell"`
   - `"seat.haskell.ghci"` -> `"stack ghci"`
 
