@@ -2,15 +2,17 @@
 
 In order to use SEAT as a student you need to follow 5 simple steps: 
 
-1. Install Haskell [installation](https://www.haskell.org/platform/) or [Stack](https://docs.haskellstack.org/en/stable/README/) (recommended), a Haskell package manager which includes `GHC`. Make sure to run `stack setup` once it is installed and change the SEAT configurations as described below. 
+1. Install Haskell [installation](https://www.haskell.org/platform/) or [Stack](https://docs.haskellstack.org/en/stable/README/) (recommended), a Haskell package manager which includes `GHC`. Make sure to run `stack setup` once it is installed and change the SEAT configurations as described below.
 
-2. [Download VS Code](https://code.visualstudio.com)
+3. Install the Haskell library QuickCheck by running `cabal install QuickCheck` or `stack install QuickCheck` if you used the Stack installation.
 
-3. [Download SEAT extension](https://marketplace.visualstudio.com/items?itemName=UCL.labassignments). You can also run this command `ext install labassignments` in VS Code Quick Open.
+4. [Download VS Code](https://code.visualstudio.com)
 
-4. Open any `.pla` file ([here](https://drive.google.com/open?id=0B-bbBbmOr9FZMlJUQXYyQ05DSGs) you have one covering Haskell basics). SEAT will automatically generate a `.hs` where you can start coding your solutions. You'll need to open the `.pla` file first everytime you want to use SEAT.
+5. [Download SEAT extension](https://marketplace.visualstudio.com/items?itemName=UCL.labassignments). You can also run this command `ext install labassignments` in VS Code Quick Open.
 
-5. Whenever you want to check if your code is correct, click the button: `Check answers`. SEAT will assess your solutions and provide feedback. If the code doesn't compile, SEAT will show the compiling errors through GHCi.
+6. Open any `.pla` file ([here](https://drive.google.com/open?id=0B-bbBbmOr9FZMlJUQXYyQ05DSGs) you have one covering Haskell basics). SEAT will automatically generate a `.hs` where you can start coding your solutions. You'll need to open the `.pla` file first everytime you want to use SEAT.
+
+7. Whenever you want to check if your code is correct, click the button: `Check answers`. SEAT will assess your solutions and provide feedback. If the code doesn't compile, SEAT will show the compiling errors through GHCi.
 
 Note: In order for SEAT to work correctly with Stack, two configurations must be changed (open the config file through Code > Preferences > Settings): 
   - `"seat.haskell.runHaskell"` -> `"stack runhaskell"`
