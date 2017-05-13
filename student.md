@@ -1,6 +1,6 @@
 # SEAT
 
-In order to use SEAT as a student you need to follow 5 simple steps: 
+In order to use SEAT as a student you need to follow 6 simple steps: 
 
 1. Install Haskell [installation](https://www.haskell.org/platform/) or [Stack](https://docs.haskellstack.org/en/stable/README/) (recommended), a Haskell package manager which includes `GHC`. Make sure to run `stack setup` once it is installed and change the SEAT configurations as described below.
 
