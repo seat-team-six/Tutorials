@@ -26,7 +26,7 @@ language and therefore no special software is required. The structure of the fil
 ```
 
 There's no limit in the amount of exercises or questions. The code provided for
-every question can be of any length. If the code for a specific questions contains more that one 
+every question can be of any length. If the code for a specific question contains more than one 
 function, the main function should be the placed first. Keep in mind that functions must have
 their types definitions.
 
